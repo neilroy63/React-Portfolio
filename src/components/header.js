@@ -4,12 +4,14 @@ function Header() {
   return (
     <div>
       <h1>Welcome to my page!</h1>
-      {/* <h2>...</h2>
-      <ul>
-        <li>..</li>
-        <li>..</li>
-        <li>..</li>
-      </ul> */}
+      <nav>
+        <ul>
+          <li>About Me</li>
+          <li>Portfolio</li>
+          <li>Contact Me</li>
+          <li>Resume</li>
+        </ul>
+      </nav>
     </div>
   );
 }
