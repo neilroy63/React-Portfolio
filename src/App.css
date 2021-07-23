@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+/* Colour palette  
+CSS HEX 
+--orange-web: #ffa400ff;
+--carolina-blue: #009ffdff;
+--nadeshiko-pink: #efaac4ff;
+--black-coffee: #41393eff;
+--french-raspberry: #c33149ff;
+--french-violet: #731dd8ff;
+--granny-apple: #bde4a7;
+--dark-purple: #381d2a; 
+--baby-powder: #fdfffc;
+-eerie-black: #191919;
+--tart-orange: #ef5b5b;
+--fire-opal: #ee6352;
+--honey-yellow: #FFB30F;
+*/
+
+/* Global Styles  
+----------------------------------*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body {
+    color: #191919;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+img {
+    width: 300px;
+}
+a {
+    color: #fdfffc;
+
+}
+a:hover{
+    text-decoration: none;  
+}
+h1{
+    font-size: 80px;
+    line-height: 1;
+}
+h2 {
+    font-size: 40px;
+}
+h1,h2{
+    font-family: 'Bangers', cursive;
+    margin: 0;
+}
+h3{
+    margin-bottom: 0;
+}
+.item-details h3 + p {
+ font-style: italic;   
+}
+.item-details h3 ~ p {
+    margin: 0;
+}
+.content-wrapper{
+    max-width: 900px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.divider > section {
+    border-bottom: 1px dashed #41393eff;    
+    padding: 25px 0;
+}
+.divider > section:last-of-type {
+    border-bottom: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Profile   
+----------------------------------*/
+/* header {
+    background: #ffa400ff;
+}
+span {
+    font-size: 33px;
+} */
+
+/* Projects   
+----------------------------------*/
+.project {
+background: #009ffdff;
+}
+.project .btn {
+    padding: 6px;
+    background: #ef5b5b;
+    border-radius: 4px;
+    display: inline-block;
+}
+.project .btn:hover{
+    background: rgb(56,29,42, 80%);
+}
+.project-item {
+    overflow: hidden;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.project-item h3 {
+    margin-top: 0;
+}
+.project a{
+    text-decoration: none;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Work Experience    
+----------------------------------*/
+.work-experience {
+    background: #efaac4ff;
 }
 
-.App-link {
-  color: #61dafb;
+/* Education    
+----------------------------------*/
+.education{
+    background-image: url(./images/Education\ background.jpg);
+    background-size: cover;
+    background-position:top right;
+    padding-bottom: 101px;
+}
+.education p {
+    width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Contact Info     
+----------------------------------*/
+footer {
+    background: #ee6352;
+    color: #fdfffc;
+}
+.contact-list{
+    list-style-type: none;
+    padding: 0;
+
+}
+.contact-list a {
+    padding: 16px;
+    display: inline-block;
+
+}
+
+/*
+Responsive  
+*/
+@media screen and (min-width:750px) {
+    header, footer {
+        text-align: center;
+
+    }
+    .project-item img {
+        float: left;
+        margin-right: 21px;
+    }
+    .contact-list{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width:749px){
+    h1 {
+        font-size: 73px;
+        line-height: 0.8;
+        margin-bottom: 20px;
+    }
+    h1,h2 {
+        line-height: 1;
+    }
+    .contact-list{
+        padding: 4px;
+    }
 }
